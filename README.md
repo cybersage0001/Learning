@@ -2,10 +2,10 @@
 
 # 🔐 Cybersecurity Learning Journey
 
-Hi! I'm Cybersage,Etc, a cybersecurity enthusiast documenting my learning journey.
+Hi! I'm Cybersage, a cybersecurity enthusiast documenting my learning journey.
 
 ## 📌 What You'll Find Here
-- CTF Write-ups (TryHackMe, HackTheBox,etc..)
+- CTF Write-ups (TryHackMe, HackTheBox, etc.)
 - Tool tutorials and notes
 - Security concepts explained simply
 - Practice lab setups
