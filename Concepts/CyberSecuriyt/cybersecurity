@@ -1,1 +1,26 @@
+Cyber Security (Basics)
 
+Cybersecurity means keeping computers, networks, and data safe from hackers and attacks.
+
+It helps protect important information like passwords, personal data, and files from being stolen or damaged.
+
+Basic Ideas
+Confidentiality – Only the right people can see the data
+Integrity – Data should not be changed by others
+Availability – Data should be available when needed
+
+Common Threats
+Malware – Harmful software like viruses
+Phishing – Fake messages to trick people
+Hacking – Unauthorized access to systems
+
+Basic Tools & Concepts
+Firewall – Protects systems from unwanted access
+Encryption – Keeps data safe by converting it into secret form
+Vulnerability – A weakness in a system
+Penetration Testing – Testing systems to find security problems
+
+Why It Is Important
+Keeps personal data safe
+Protects systems from attacks
+Helps maintain privacy
