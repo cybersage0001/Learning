@@ -5,8 +5,8 @@ Cybersecurity means keeping computers, networks, and data safe from hackers and 
 It helps protect important information, such as passwords, personal data, and files, from theft or damage.
 
 ## Basic Ideas
-Confidentiality – Only the right people can see the data
-Integrity – Others should not change data
+Confidentiality – Only the right people can see the data /n
+Integrity – Others should not change data   /n
 Availability – Data should be available when needed
 
 ## Common Threats
