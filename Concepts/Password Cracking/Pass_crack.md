@@ -100,6 +100,14 @@ or:
 ```bash
 hash-identifier
 ```
+<img width="507" height="212" alt="5" src="https://github.com/user-attachments/assets/20aba472-a7cc-493b-924c-27fbca4f7fef" />
+
+or:
+
+```
+hash-analyzer
+```
+<img width="604" height="564" alt="2" src="https://github.com/user-attachments/assets/adef0ecb-6d68-4905-847e-6a15cf39abc3" />
 
 Another option is using an online hash analyzer in a controlled learning environment.
 
@@ -183,6 +191,8 @@ The password recovered during the lab was:
 ```text
 kangeroo
 ```
+<img width="516" height="523" alt="4" src="https://github.com/user-attachments/assets/84c5ee4b-ac9a-4322-b3e1-d22dbb88abd0" />
+
 
 ### What this demonstrated
 
@@ -219,6 +229,8 @@ The password recovered during the lab was:
 ```text
 biscuit
 ```
+<img width="726" height="210" alt="6" src="https://github.com/user-attachments/assets/f8591af8-f360-49e9-a1ab-56149a3a3403" />
+
 
 To display the recovered password again:
 
@@ -270,6 +282,7 @@ The password recovered during the lab was:
 ```text
 1234
 ```
+<img width="1284" height="514" alt="7" src="https://github.com/user-attachments/assets/f0e58b5d-732e-44a9-8b4b-950f81a5d129" />
 
 ### Why this exercise was useful
 
@@ -326,6 +339,7 @@ The password recovered during the exercise was:
 ```text
 pass123
 ```
+<img width="1215" height="393" alt="9" src="https://github.com/user-attachments/assets/414914f1-5e65-49c7-ab17-935de7d06b45" />
 
 The archive could then be extracted using the recovered password.
 
@@ -398,8 +412,10 @@ john --wordlist=/usr/share/wordlists/rockyou.txt secure.txt
 The password recovered was:
 
 ```text
-butterfly
+password
 ```
+<img width="1024" height="434" alt="10" src="https://github.com/user-attachments/assets/0c815a0c-f0de-47c0-9079-a3dbdee14add" />
+
 
 ### Lesson learned
 
@@ -448,6 +464,7 @@ The passphrase recovered during the lab was:
 ```text
 mango
 ```
+<img width="857" height="393" alt="11" src="https://github.com/user-attachments/assets/c0eee66c-e4c2-47f4-b01a-a2e5f0370ff0" />
 
 ### Understanding the process
 
@@ -482,6 +499,7 @@ For example, a SHA-256 hash in the lab was identified and successfully matched t
 ```text
 passwd123
 ```
+<img width="1346" height="598" alt="1" src="https://github.com/user-attachments/assets/2762e564-6611-4b0f-a445-5818cc1757a5" />
 
 This demonstrates an important security concept:
 
