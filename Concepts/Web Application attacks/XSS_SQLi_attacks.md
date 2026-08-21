@@ -384,7 +384,7 @@ Validate input based on expected formats.
 ### 📊 Skills Practiced
 During this hands-on exercise, I practiced:
 
-Web Application Security
+Web Application Security<br>
 SQL Injection <br>
 -Query Manipulation <br>
 -Error Observation<br>
