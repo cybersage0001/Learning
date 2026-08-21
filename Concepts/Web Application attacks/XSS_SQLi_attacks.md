@@ -300,7 +300,7 @@ Browser DOM elements
 <img width="793" height="444" alt="7_xss" src="https://github.com/user-attachments/assets/116039ac-ccf1-49e9-9615-dd6097fba25a" />
 
 
-🧠 Key Lessons Learned
+### 🧠 Key Lessons Learned
 
 This practice session gave me a much deeper understanding of web application security.
 
@@ -351,11 +351,10 @@ Parameterized database queries
 Secure frameworks and APIs
 Content Security Policy (CSP)
 HttpOnly and Secure cookie attributes
-🛡️ Recommended Defensive Practices
-Preventing SQL Injection
 
+### 🛡️ Recommended Defensive Practices
+#### Preventing SQL Injection
 Developers should:
-
 Use prepared statements.
 Use parameterized queries.
 Avoid building SQL queries through string concatenation.
@@ -372,10 +371,8 @@ cursor.execute(
 
 The exact syntax depends on the programming language and database library.
 
-Preventing XSS
-
+#### Preventing XSS
 Developers should:
-
 Encode output based on its context.
 Treat all user-controlled data as untrusted.
 Use modern templating frameworks safely.
@@ -383,29 +380,29 @@ Avoid unsafe HTML insertion methods.
 Implement Content Security Policy where appropriate.
 Use HttpOnly cookies for sensitive session data.
 Validate input based on expected formats.
-📊 Skills Practiced
 
+### 📊 Skills Practiced
 During this hands-on exercise, I practiced:
 
 Web Application Security
-│
-├── SQL Injection
-│   ├── Query Manipulation
-│   ├── Error Observation
-│   ├── ORDER BY Testing
-│   ├── Database Enumeration
-│   ├── Table Discovery
-│   ├── Column Discovery
-│   └── Data Exposure Analysis
-│
-└── Cross-Site Scripting
-    ├── Reflected XSS
-    ├── Input Reflection
-    ├── Browser Behavior
-    ├── Security Filter Testing
-    ├── Source Code Review
-    └── Security Level Comparison
-🚀 Conclusion
+SQL Injection <br>
+-Query Manipulation <br>
+-Error Observation<br>
+-ORDER BY Testing<br>
+-Database Enumeration<br>
+-Table Discovery<br>
+-Column Discovery<br>
+-Data Exposure Analysis<br>
+
+Cross-Site Scripting
+-Reflected XSS<br>
+-Input Reflection<br>
+-Browser Behavior<br>
+-Security Filter Testing<br>
+-Source Code Review<br>
+-Security Level Comparison<br>
+
+### 🚀 Conclusion
 
 This was an important step in my cybersecurity learning journey.
 
@@ -436,6 +433,5 @@ OWASP Top 10
 
 I will continue documenting my hands-on cybersecurity learning journey, one lab at a time. 🚀
 
-⚠️ Disclaimer
-
+### ⚠️ Disclaimer
 This repository documents security testing performed exclusively in an intentionally vulnerable and authorized training environment using DVWA. The techniques were practiced for educational purposes only. Never perform security testing against systems, applications, or networks without explicit authorization.
