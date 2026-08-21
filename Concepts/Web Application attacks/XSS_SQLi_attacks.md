@@ -417,20 +417,6 @@ For XSS, I learned how insecure handling of reflected input can cause a browser 
 I also learned the importance of reviewing source code and understanding defensive mechanisms. Seeing the difference between low, medium, and higher security configurations helped me understand why some protections work and why others can still have weaknesses.
 
 This is only the beginning of my web application security journey.
-
-My next goal is to continue learning and practicing:
-
-Authentication vulnerabilities
-Broken Access Control
-File Upload vulnerabilities
-Command Injection
-CSRF
-File Inclusion
-API Security
-Business Logic vulnerabilities
-Burp Suite for web application testing
-OWASP Top 10
-
 I will continue documenting my hands-on cybersecurity learning journey, one lab at a time. 🚀
 
 ### ⚠️ Disclaimer
