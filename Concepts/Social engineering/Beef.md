@@ -365,7 +365,7 @@ The biggest lesson was simple:
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Jalp Patel
 
 **Cybersecurity Learning Journey**
 
