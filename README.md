@@ -11,11 +11,10 @@ Hi! I'm Cybersage, a cybersecurity enthusiast documenting my learning journey.
 - Practice lab setups
 
 ## 🛠️ Tools I'm Learning
-Nmap | Burp Suite | Metasploit | Wireshark | Linux
+Nmap | Burp Suite | Metasploit | Wireshark | Linux | SEToolKit | BEEF | SPLUNK 
 
 ## 📫 Connect With Me
-- LinkedIn: ...
-- Medium/Blog: ...
+- Medium/Blog: https://medium.com/@cybersage0001
 
 ---
 ⭐ Star this repo if you find it helpful!
