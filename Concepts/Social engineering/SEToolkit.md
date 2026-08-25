@@ -72,40 +72,31 @@ Using an isolated environment is important because social engineering and creden
 
 # 🔄 Attack Simulation Workflow
 
-The overall workflow followed in this lab was:
+The overall workflow followed in this lab was:<br>
 
-SET
- │
- ▼
-Social Engineering Attacks
- │
- ▼
-Website Attack Vectors
- │
- ▼
-Credential Harvester / Site Cloning
- │
- ▼
-Controlled Webpage Clone
- │
- ▼
-Test User Interaction
- │
- ▼
-Submitted Data Captured in Lab
- │
- ▼
-Payload Demonstration
- │
- ▼
-Listener Configuration
- │
- ▼
+SET<br>
+
+Social Engineering Attacks<br>
+ 
+Website Attack Vectors<br>
+ 
+Credential Harvester / Site Cloning <br>
+ 
+Controlled Webpage Clone<br>
+ 
+Test User Interaction<br>
+ 
+Submitted Data Captured in Lab<br>
+ 
+Payload Demonstration<br>
+ 
+Listener Configuration<br>
+ 
 Controlled Session Verification
 
 
 
-tep 1: Launching the Social-Engineer Toolkit
+### Step 1: Launching the Social-Engineer Toolkit
 
 The first step was to launch the Social-Engineer Toolkit.
 
@@ -121,7 +112,7 @@ Toolkit Configuration
 <img width="730" height="519" alt="1" src="https://github.com/user-attachments/assets/fbf33c09-8811-4195-a11d-f73dba68d819" />
 
 
-Step 2: Exploring Social Engineering Attack Options
+### Step 2: Exploring Social Engineering Attack Options
 
 After entering the Social Engineering section, I explored different attack vectors available in SET.
 
@@ -138,7 +129,7 @@ For this project, the focus was on the Website Attack Vector.
 <img width="731" height="293" alt="2" src="https://github.com/user-attachments/assets/60e30391-e228-4ee9-b3a5-5af736fc941c" />
 
 
-Step 3: Exploring Website Attack Methods
+### Step 3: Exploring Website Attack Methods
 
 Inside the Website Attack Vector section, SET displayed different web-based attack simulation methods.
 
@@ -154,7 +145,7 @@ For this controlled exercise, I selected the webpage cloning and credential-harv
 <img width="586" height="212" alt="3" src="https://github.com/user-attachments/assets/eaf58a75-3efd-414d-a1a1-08e25df5ed76" />
 
 
-Step 4: Selecting the Site Cloning Method
+### Step 4: Selecting the Site Cloning Method
 
 The next step was selecting the website cloning option.
 
@@ -169,7 +160,7 @@ For this exercise, I used the site cloning functionality against a deliberately 
 <img width="714" height="130" alt="4" src="https://github.com/user-attachments/assets/28dc2a3b-513c-41ee-b97b-a6e5a10060f8" />
 
 
-Step 5: Configuring the Controlled Clone
+### Step 5: Configuring the Controlled Clone
 
 SET requested information required to host and process the cloned page.
 
@@ -184,7 +175,7 @@ If a user cannot distinguish between a legitimate page and a malicious clone, th
 <img width="615" height="271" alt="5" src="https://github.com/user-attachments/assets/b48579c7-803a-4107-8b4d-1f398f53295a" />
 
 
-Step 6: Understanding Credential Capture
+### Step 6: Understanding Credential Capture
 
 After the cloned webpage was prepared, SET started a local credential-harvesting service.
 
@@ -201,7 +192,7 @@ The important lesson from this stage was that an attacker does not always need t
 
 🔒 Sensitive values have been intentionally omitted from this documentation.
 
-Step 7: Creating a Demonstration Payload
+### Step 7: Creating a Demonstration Payload
 
 The next part of the lab focused on understanding payload creation.
 
@@ -214,7 +205,7 @@ For this project, the payload functionality was used only inside the authorized 
 <img width="590" height="326" alt="1" src="https://github.com/user-attachments/assets/268de94f-b3aa-4fa2-bfea-87a347d6788b" />
 <img width="408" height="284" alt="2" src="https://github.com/user-attachments/assets/9572ceeb-150b-400a-88bb-2053e5a5f259" />
 
-Step 8: Configuring the Payload Listener
+### Step 8: Configuring the Payload Listener
 
 After selecting the demonstration payload, the listener configuration was prepared.
 
@@ -231,7 +222,7 @@ A listener waits for an authorized laboratory payload to connect back.
 <img width="608" height="291" alt="5" src="https://github.com/user-attachments/assets/f6567beb-a999-4daf-a446-1a1b5da15e8b" />
 
 
-Step 9: Reviewing Listener Options
+### Step 9: Reviewing Listener Options
 
 Before running the listener, I reviewed the available configuration.
 
@@ -245,7 +236,7 @@ Session handling
 <img width="615" height="351" alt="6" src="https://github.com/user-attachments/assets/e5c43377-de78-46d7-b502-c8c53f8e37b6" />
 
 
-Step 10: Preparing a Controlled Redirect Page
+### Step 10: Preparing a Controlled Redirect Page
 
 As part of the practical exercise, I also created a simple HTML page used for controlled redirection inside the lab.
 
@@ -254,7 +245,7 @@ This demonstrated how web content can redirect a browser to another controlled l
 <img width="697" height="262" alt="7" src="https://github.com/user-attachments/assets/2ed1d5d4-2606-41e0-837d-4641d4abe727" />
 
 
-Step 11: Hosting Files Using a Local HTTP Server
+### Step 11: Hosting Files Using a Local HTTP Server
 
 The required demonstration files were placed inside a local directory.
 
@@ -271,7 +262,7 @@ Creating a file
 Hosting a file
 Making it reachable over the network
 
-Step 12: Verifying the Controlled Session
+### Step 12: Verifying the Controlled Session
 
 After the authorized test interaction, the listener received a session.
 
