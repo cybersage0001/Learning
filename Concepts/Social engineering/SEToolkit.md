@@ -39,7 +39,7 @@ The main objectives of this lab were:
 7. Observe how a simulated compromised session appears in a controlled environment.
 8. Learn how organizations can defend against these techniques.
 
----
+
 
 # 🛠️ Tools Used
 
@@ -52,7 +52,7 @@ The main objectives of this lab were:
 | Web Browser | Accessing the cloned webpage |
 | DVWA | Deliberately vulnerable web application used in the lab |
 
----
+
 
 # 🧪 Lab Environment
 
@@ -68,7 +68,7 @@ The environment contained:
 
 Using an isolated environment is important because social engineering and credential-harvesting techniques can cause serious harm if performed without authorization.
 
----
+
 
 # 🔄 Attack Simulation Workflow
 
@@ -116,6 +116,7 @@ Social-Engineering Attacks
 Penetration Testing
 Third-Party Modules
 Toolkit Configuration
+
 <img width="730" height="519" alt="1" src="https://github.com/user-attachments/assets/fbf33c09-8811-4195-a11d-f73dba68d819" />
 
 
