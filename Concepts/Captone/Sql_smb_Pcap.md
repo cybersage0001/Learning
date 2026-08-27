@@ -792,22 +792,7 @@ Do not attempt to access, scan, exploit, or modify systems without explicit perm
 
 Suggested screenshot organization for this repository:
 
-```text
-screenshots/
-├── challenge-1-sql-injection.png
-├── challenge-1-password-cracking.png
-├── challenge-1-ssh-flag.png
-├── challenge-2-dirb-enumeration.png
-├── challenge-2-directory-listing.png
-├── challenge-2-flag-file.png
-├── challenge-3-nmap-smb-scan.png
-├── challenge-3-smb-enumeration.png
-├── challenge-3-smbclient-download.png
-├── challenge-3-flag.png
-├── challenge-4-wireshark-http-analysis.png
-├── challenge-4-data-directory.png
-└── challenge-4-accounts-xml.png
-```
+
 
 ---
 
