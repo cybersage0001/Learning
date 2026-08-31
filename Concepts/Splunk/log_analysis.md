@@ -164,6 +164,9 @@ Logs are custom formatted.
 You need to extract a field temporarily.
 You want to investigate a specific pattern.
 
+<img width="1354" height="616" alt="8" src="https://github.com/user-attachments/assets/05094b10-5ca3-4bac-b3d9-dc497ab9d361" />
+
+
 ### 4. Count Firewall Actions
 
 Next, I wanted to understand the overall distribution of firewall actions.
@@ -199,6 +202,9 @@ All Firewall Events
 
 This is a simple but useful SOC technique because it provides a quick overview of network activity.
 
+<img width="1351" height="489" alt="9" src="https://github.com/user-attachments/assets/febf191c-40c9-431c-b05d-61da923e71f5" />
+
+
 ### 5. Filter Only Denied Traffic
 
 After identifying the total number of denied events, I narrowed the search to DENY actions.
@@ -230,6 +236,9 @@ However, a DENY event by itself does not automatically mean an attack occurred.
 
 The analyst needs to examine the source, destination, protocol, frequency, timing, and other context.
 
+<img width="1346" height="591" alt="10" src="https://github.com/user-attachments/assets/d39812ee-9649-46c6-b695-04551a42e686" />
+
+
 ### 6. Extract Source IP and Action
 
 For deeper analysis, I extracted both the source IP address and firewall action.
@@ -253,6 +262,7 @@ becomes:
 
 src_ip = 192.168.1.168
 action = DENY
+
 
 ### 7. Calculate Total, Denied and Allowed Events by Source IP
 
@@ -286,6 +296,9 @@ count(eval(action="ACCEPT")) as allowed_events
 This is an important lesson when working with SIEM data:
 
 Always make sure your query values match the values actually present in the logs.
+
+<img width="1339" height="601" alt="11" src="https://github.com/user-attachments/assets/91a6c0c9-36f5-480f-bf47-15a6a256545a" />
+
 
 ### 8. Understanding the stats Command
 
