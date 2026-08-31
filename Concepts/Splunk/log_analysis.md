@@ -1,5 +1,5 @@
-Splunk Firewall Log Analysis — Hands-On Practice
-📌 Overview
+# Splunk Firewall Log Analysis — Hands-On Practice
+### Overview
 
 As part of my cybersecurity and Security Operations Center (SOC) learning journey, I practiced analyzing firewall logs using Splunk Enterprise.
 
@@ -17,7 +17,7 @@ Timestamp
 
 The main focus was to identify accepted and denied network traffic and determine which source IP addresses were generating the highest number of denied events.
 
-🎯 Objectives
+### 🎯 Objectives
 
 The objectives of this hands-on practice were:
 
@@ -29,12 +29,14 @@ Count ACCEPT and DENY events.
 Filter only denied traffic.
 Identify source IPs generating the highest number of denied events.
 Understand how SPL commands can be combined for security monitoring.
-🛠️ Tools Used
+
+### 🛠️ Tools Used
 Tool	Purpose
 Splunk Enterprise	Log collection, searching and analysis
 Splunk SPL	Querying and processing firewall events
 Firewall Logs	Network security event data
-1. Understanding the Firewall Logs
+
+### 1. Understanding the Firewall Logs
 
 The firewall events used in this exercise followed a format similar to:
 
@@ -70,7 +72,8 @@ Network scanning
 Unauthorized communication
 Repeated connection attempts
 Potential reconnaissance activity
-2. Search Firewall Logs in Splunk
+
+### 2. Search Firewall Logs in Splunk
 
 The first step was to search for events from the firewall log source.
 
@@ -106,9 +109,9 @@ Statistical Analysis
      ↓
 Security Investigation
 
-📸 Screenshot: Add your first Splunk screenshot here.
+<img width="1346" height="600" alt="7" src="https://github.com/user-attachments/assets/b127a470-e458-4b08-a5b8-0066352850d4" />
 
-3. Extract the Source IP Address Using rex
+### 3. Extract the Source IP Address Using rex
 
 Firewall logs are often stored as raw text.
 
@@ -160,7 +163,8 @@ Data is not automatically parsed.
 Logs are custom formatted.
 You need to extract a field temporarily.
 You want to investigate a specific pattern.
-4. Count Firewall Actions
+
+### 4. Count Firewall Actions
 
 Next, I wanted to understand the overall distribution of firewall actions.
 
@@ -195,7 +199,7 @@ All Firewall Events
 
 This is a simple but useful SOC technique because it provides a quick overview of network activity.
 
-5. Filter Only Denied Traffic
+### 5. Filter Only Denied Traffic
 
 After identifying the total number of denied events, I narrowed the search to DENY actions.
 
@@ -226,7 +230,7 @@ However, a DENY event by itself does not automatically mean an attack occurred.
 
 The analyst needs to examine the source, destination, protocol, frequency, timing, and other context.
 
-6. Extract Source IP and Action
+### 6. Extract Source IP and Action
 
 For deeper analysis, I extracted both the source IP address and firewall action.
 
@@ -249,7 +253,8 @@ becomes:
 
 src_ip = 192.168.1.168
 action = DENY
-7. Calculate Total, Denied and Allowed Events by Source IP
+
+### 7. Calculate Total, Denied and Allowed Events by Source IP
 
 The next step was to determine how much traffic each source IP generated and how much of that traffic was denied.
 
@@ -282,7 +287,7 @@ This is an important lesson when working with SIEM data:
 
 Always make sure your query values match the values actually present in the logs.
 
-8. Understanding the stats Command
+### 8. Understanding the stats Command
 
 This section is particularly important for beginners.
 
@@ -325,7 +330,7 @@ Source IP	Total Events	Denied Events	Accepted Events
 
 The exact values depend on the complete dataset, but the important point is how the query produces the analysis.
 
-9. Sort Sources by Denied Events
+### 9. Sort Sources by Denied Events
 
 The final part of the query is:
 
@@ -374,7 +379,7 @@ index=main sourcetype="firewall_new"
 
 This can help identify unusual communication patterns.
 
-11. What I Learned
+### 11. What I Learned
 
 This hands-on exercise helped me understand several important Splunk concepts.
 
@@ -470,7 +475,7 @@ Windows/Linux security logs
 
 This provides better context before classifying an event as malicious.
 
-13. Useful SPL Queries
+### 13. Useful SPL Queries
 View all firewall events
 index=main sourcetype="firewall_new"
 Count actions
@@ -500,7 +505,8 @@ index=main sourcetype="firewall_new"
     count(eval(action="ACCEPT")) as accepted_events
     by src_ip
 | sort - denied_events
-14. Defensive Recommendations
+
+### 14. Defensive Recommendations
 
 From a defensive monitoring perspective, organizations should:
 
@@ -512,7 +518,8 @@ Use meaningful field extraction and consistent field names.
 Maintain accurate firewall rules and regularly review them.
 Investigate internal hosts generating unexpected network traffic.
 Use dashboards to visualize firewall activity over time.
-15. Key Takeaways
+
+### 15. Key Takeaways
 
 This practice demonstrated how Splunk can transform raw firewall logs into useful security information.
 
@@ -538,7 +545,7 @@ The biggest takeaway for me was that SPL becomes much more powerful when multipl
 
 Instead of simply searching for an event, I can extract information, calculate statistics, filter results, and prioritize potentially interesting activity.
 
-16. Skills Practiced
+### 16. Skills Practiced
 Splunk Enterprise
 Splunk SPL
 Firewall Log Analysis
@@ -555,7 +562,8 @@ sort
 Source IP Analysis
 Security Event Investigation
 SOC Monitoring Fundamentals
-17. Conclusion
+
+### 17. Conclusion
 
 This hands-on exercise gave me practical experience with analyzing firewall logs using Splunk Enterprise.
 
@@ -565,6 +573,6 @@ I also learned an important real-world lesson: queries must match the actual val
 
 This exercise strengthened my understanding of how a SOC analyst can use Splunk to move from raw log data → meaningful information → investigation priorities.
 
-⚠️ Disclaimer
+### ⚠️ Disclaimer
 
 This project was performed in a controlled lab/learning environment for educational and cybersecurity training purposes. The techniques demonstrated here should only be used on systems, networks, and data that you own or have explicit authorization to analyze.
