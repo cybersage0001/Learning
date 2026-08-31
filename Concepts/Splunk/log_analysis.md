@@ -430,22 +430,23 @@ Most importantly, I learned that SIEM analysis is not just about finding numbers
 
 The analyst needs to ask:
 
-What happened?
-      ↓
-Which host generated it?
-      ↓
-What was the destination?
-      ↓
-What protocol was used?
-      ↓
-Was it allowed or denied?
-      ↓
-How frequently did it happen?
-      ↓
-Is the behavior expected?
-      ↓
-Does it require investigation?
-12. Security Analysis
+What happened?<br>
+      ↓<br>
+Which host generated it?<br>
+      ↓<br>
+What was the destination?<br>
+      ↓<br>
+What protocol was used?<br>
+      ↓<br>
+Was it allowed or denied?<br>
+      ↓<br>
+How frequently did it happen?<br>
+      ↓<br>
+Is the behavior expected?<br>
+      ↓<br>
+Does it require investigation?<br>
+
+### 12. Security Analysis
 
 From the analysis, the dataset contained:
 
@@ -477,92 +478,84 @@ Windows/Linux security logs
 This provides better context before classifying an event as malicious.
 
 ### 13. Useful SPL Queries
-View all firewall events
-index=main sourcetype="firewall_new"
-Count actions
-index=main sourcetype="firewall_new"
-| stats count by ACTION
-Show only denied events
-index=main sourcetype="firewall_new"
-| search ACTION="DENY"
-Extract source IP
-index=main sourcetype="firewall_new"
-| rex field=_raw "SRC=(?<src_ip>\d{1,3}(?:\.\d{1,3}){3})"
-Count denied events
-index=main sourcetype="firewall_new" ACTION="DENY"
-| stats count
-Find top source IPs by denied traffic
-index=main sourcetype="firewall_new"
-| rex field=_raw "SRC=(?<src_ip>\S+)"
-| search ACTION="DENY"
-| stats count as denied_events by src_ip
-| sort - denied_events
-Compare accepted and denied traffic by source
-index=main sourcetype="firewall_new"
-| rex field=_raw "SRC=(?<src_ip>\S+)"
-| rex field=_raw "ACTION=(?<action>\S+)"
-| stats count as total_events,
-    count(eval(action="DENY")) as denied_events,
-    count(eval(action="ACCEPT")) as accepted_events
-    by src_ip
-| sort - denied_events
+View all firewall events<br>
+index=main sourcetype="firewall_new"<br>
+
+Count actions<br>
+index=main sourcetype="firewall_new"| stats count by ACTION<br>
+
+Show only denied events<br>
+index=main sourcetype="firewall_new"| search ACTION="DENY"<br>
+
+Extract source IP<br>
+index=main sourcetype="firewall_new" | rex field=_raw "SRC=(?<src_ip>\d{1,3}(?:\.\d{1,3}){3})"<br>
+
+Count denied events<br>
+index=main sourcetype="firewall_new" ACTION="DENY"| stats count<br>
+
+Find top source IPs by denied traffic<br>
+index=main sourcetype="firewall_new"| rex field=_raw "SRC=(?<src_ip>\S+)" | search ACTION="DENY"| stats count as denied_events by src_ip| sort - denied_events<br>
+
+Compare accepted and denied traffic by source<br>
+index=main sourcetype="firewall_new"| rex field=_raw "SRC=(?<src_ip>\S+)"| rex field=_raw "ACTION=(?<action>\S+)"
+| stats count as total_events, count(eval(action="DENY")) as denied_events, count(eval(action="ACCEPT")) as accepted_events by src_ip | sort - denied_events<br>
 
 ### 14. Defensive Recommendations
 
 From a defensive monitoring perspective, organizations should:
 
-Monitor repeated denied connections from the same source.
-Investigate unusual source-to-destination communication.
-Correlate firewall logs with endpoint and authentication logs.
-Create alerts for abnormal spikes in denied traffic.
-Use meaningful field extraction and consistent field names.
-Maintain accurate firewall rules and regularly review them.
-Investigate internal hosts generating unexpected network traffic.
-Use dashboards to visualize firewall activity over time.
+Monitor repeated denied connections from the same source.<br>
+Investigate unusual source-to-destination communication.<br>
+Correlate firewall logs with endpoint and authentication logs.<br>
+Create alerts for abnormal spikes in denied traffic.<br>
+Use meaningful field extraction and consistent field names.<br>
+Maintain accurate firewall rules and regularly review them.<br>
+Investigate internal hosts generating unexpected network traffic.<br>
+Use dashboards to visualize firewall activity over time.<br>
 
 ### 15. Key Takeaways
 
 This practice demonstrated how Splunk can transform raw firewall logs into useful security information.
 
-The overall workflow was:
+The overall workflow was:<br>
 
-Raw Firewall Logs
-       ↓
-Search in Splunk
-       ↓
-Extract SRC and ACTION
-       ↓
-Count ACCEPT / DENY
-       ↓
-Filter DENY Events
-       ↓
-Group by Source IP
-       ↓
-Sort by Denied Events
-       ↓
-Identify Candidates for Investigation
+Raw Firewall Logs<br>
+       ↓<br>
+Search in Splunk<br>
+       ↓<br>
+Extract SRC and ACTION<br>
+       ↓<br>
+Count ACCEPT / DENY<br>
+       ↓<br>
+Filter DENY Events<br>
+       ↓<br>
+Group by Source IP<br>
+       ↓<br>
+Sort by Denied Events<br>
+       ↓<br>
+Identify Candidates for Investigation<br>
 
 The biggest takeaway for me was that SPL becomes much more powerful when multiple commands are combined.
 
 Instead of simply searching for an event, I can extract information, calculate statistics, filter results, and prioritize potentially interesting activity.
 
-### 16. Skills Practiced
-Splunk Enterprise
-Splunk SPL
-Firewall Log Analysis
-SIEM Fundamentals
-Log Searching
-Regular Expressions
-rex
-stats
-count
-eval
-search
-where
-sort
-Source IP Analysis
-Security Event Investigation
-SOC Monitoring Fundamentals
+### 16. Skills Practiced<br>
+Splunk Enterprise<br>
+Splunk SPL<br>
+Firewall Log Analysis<br>
+SIEM Fundamentals<br>
+Log Searching<br>
+Regular Expressions<br>
+rex<br>
+stats<br>
+count<br>
+eval<br>
+search<br>
+where<br>
+sort<br>
+Source IP Analysis<br>
+Security Event Investigation<br>
+SOC Monitoring Fundamentals<br>
 
 ### 17. Conclusion
 
