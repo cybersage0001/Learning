@@ -95,19 +95,7 @@ Before performing analysis, it is important to understand what data is available
 A SOC analyst normally starts broad and then progressively narrows the search.
 
 Workflow
-Firewall Logs
-     ↓
-Splunk Index
-     ↓
-Search by Sourcetype
-     ↓
-Raw Firewall Events
-     ↓
-Field Extraction
-     ↓
-Statistical Analysis
-     ↓
-Security Investigation
+Firewall Logs->Splunk Index->Search by Sourcetype->Raw Firewall Events->Field Extraction->Statistical Analysis->Security Investigation
 
 <img width="1346" height="600" alt="7" src="https://github.com/user-attachments/assets/b127a470-e458-4b08-a5b8-0066352850d4" />
 
