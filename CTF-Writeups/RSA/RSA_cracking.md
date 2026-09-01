@@ -124,6 +124,7 @@ I first inspected the file:
 ```bash
 cat id_rsa.pub
 ```
+<img width="793" height="223" alt="4" src="https://github.com/user-attachments/assets/5cf9bc3d-0834-40af-9d2d-720d5b165445" />
 
 The important point here is that an OpenSSH RSA public key contains the RSA public parameters encoded using Base64.
 
@@ -144,6 +145,7 @@ Then I inspected the converted key:
 ```bash
 cat public.pem
 ```
+<img width="792" height="522" alt="5" src="https://github.com/user-attachments/assets/aeb7d2fb-9d31-4ded-aa1e-14a43db26cd4" />
 
 The result looked like a standard PEM public key.
 
@@ -190,6 +192,7 @@ At this point I had the public RSA parameters:
 n = RSA modulus
 e = 65537
 ```
+<img width="794" height="383" alt="6" src="https://github.com/user-attachments/assets/99533c72-6b8a-4dca-9e00-4b1a4b46a976" />
 
 ---
 
@@ -312,13 +315,12 @@ Once it finds one:
 b² = a² - n
 ```
 
-we can calculate:
+We can calculate:
 
 ```text
 p = a - b
 q = a + b
 ```
-
 ---
 
 # 🔐 Step 6 — Recover p and q
@@ -345,7 +347,9 @@ $$
 p\times q=n
 $$
 
-then the factorization is correct.
+Then the factorization is correct.
+
+<img width="792" height="322" alt="7" src="https://github.com/user-attachments/assets/68f4beb1-20b6-4b6d-96b4-b456e3eeb562" />
 
 ---
 
@@ -462,6 +466,7 @@ This generated:
 ```text
 id_rsa
 ```
+<img width="553" height="126" alt="9" src="https://github.com/user-attachments/assets/8c119851-d03c-4371-b5eb-3ae57297dbd5" />
 
 The resulting key is an actual RSA private key.
 
@@ -486,6 +491,7 @@ ssh-keygen -y -f id_rsa > generated.pub
 This derives the public key from the private key.
 
 I could then compare it with the original public key.
+<img width="790" height="401" alt="10" src="https://github.com/user-attachments/assets/8f48b2a4-0482-4105-b3f9-aa9f109dbd34" />
 
 ---
 
@@ -515,6 +521,8 @@ SSH authentication
 Server verifies against
 authorized public key
 ```
+<img width="737" height="436" alt="11" src="https://github.com/user-attachments/assets/956f81c1-e19f-4eed-b970-ca2624027481" />
+<img width="676" height="470" alt="12" src="https://github.com/user-attachments/assets/f480a89c-b2b9-4e18-b916-d42dee2fa63e" />
 
 The private key should **never be shared publicly**.
 
@@ -628,7 +636,7 @@ from:
 n = p × q
 ```
 
-the RSA private key can potentially be reconstructed.
+The RSA private key can potentially be reconstructed.
 
 ### 2. Close prime factors can weaken RSA
 
