@@ -644,46 +644,17 @@ This is the difference between simply viewing security alerts and actually perfo
 
 ### 🛡️ Defensive Recommendations<br>
 
-Based on the concepts practiced in this exercise, organizations should consider:
+Based on the concepts practiced in this exercise, organizations should consider:<br>
 
-Train employees to recognize phishing and social-engineering attempts.
-Monitor suspicious inbound email activity.
-Investigate emails requesting sensitive information.
-Monitor unusual PowerShell activity.
-Monitor suspicious parent-child process relationships.
-Collect Sysmon and endpoint telemetry.
-Centralize security logs in a SIEM.
-Correlate email, endpoint, authentication, and network events.
-Regularly tune detection rules to reduce false positives.
-Maintain consistent incident documentation.
-Establish clear escalation procedures for confirmed incidents.
+Train employees to recognize phishing and social-engineering attempts.<br>
+Monitor suspicious inbound email activity.<br>
+Investigate emails requesting sensitive information.<br>
+Monitor unusual PowerShell activity.<br>
+Monitor suspicious parent-child process relationships.<br>
+Collect Sysmon and endpoint telemetry.<br>
+Centralize security logs in a SIEM.<br>
+Correlate email, endpoint, authentication, and network events.<br>
+Regularly tune detection rules to reduce false positives.<br>
+Maintain consistent incident documentation.<br>
+Establish clear escalation procedures for confirmed incidents.<br>
 
-### 💻 Skills Practiced<br>
-SOC & Blue Team
-SOC Operations
-Alert Triage
-Security Monitoring
-Incident Investigation
-Incident Response Fundamentals
-Case Management
-Email Security
-Phishing Analysis
-Email Investigation
-Social Engineering Detection
-Email Metadata Analysis
-Endpoint Security
-Sysmon
-Process Creation Analysis
-Parent-Child Process Analysis
-Windows Security Monitoring
-SIEM & Detection
-SIEM Fundamentals
-Security Alert Analysis
-Detection Rule Understanding
-True Positive / False Positive Classification
-Alert Investigation
-Documentation
-Incident Documentation
-Closure Rationale
-Case Reporting
-Investigation Notes
