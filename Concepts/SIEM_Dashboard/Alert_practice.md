@@ -224,7 +224,8 @@ Subject	Inheritance Alert: Unknown Billionaire Relative Left You Their Hat Fortu
 Sender	eileen@trendymillinercy.com
 Recipient	support@tryhatme.com
 Attachment	None
-Direction	Inbound```
+Direction	Inbound
+```
 
 The email claimed that a billionaire relative had left an inheritance and requested banking information.
 
