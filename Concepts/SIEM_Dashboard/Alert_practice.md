@@ -168,11 +168,11 @@ Process
 
 This indicated that the investigation involved both email-related and endpoint-related security activity.
 
-📸 Screenshot 1 — SOC Dashboard
+<img width="1357" height="618" alt="1" src="https://github.com/user-attachments/assets/e966922a-4923-4afd-9696-1fe6ea94c80f" />
 
 What this screenshot demonstrates:
 
-The initial SOC dashboard showing the phishing scenario, alert count, alert status, and alert categories.
+The initial SOC dashboard shows the phishing scenario, alert count, alert status, and alert categories.
 
 **2. Reviewing the Alert Queue**
 
@@ -190,7 +190,7 @@ ID	Alert Rule	Type	Severity
 
 All of the alerts were waiting for analyst action.
 
-This represents a common SOC workflow:
+```This represents a common SOC workflow:
 
 Detection System
       ↓
@@ -201,7 +201,8 @@ Alert Queue
 SOC Analyst
       ↓
 Investigation
-📸 Screenshot 2 — Alert Queue
+```
+<img width="1147" height="550" alt="2" src="https://github.com/user-attachments/assets/476c9d51-ccd5-41f1-bd0d-11782a5ba523" />
 
 What this screenshot demonstrates:
 
@@ -215,7 +216,7 @@ Suspicious email from external domain
 
 The alert contained several pieces of information that could be used during the investigation.
 
-Alert Information
+```Alert Information
 Field	Value
 Data Source	Email
 Timestamp	09/07/2026 08:29:02.720
@@ -223,13 +224,13 @@ Subject	Inheritance Alert: Unknown Billionaire Relative Left You Their Hat Fortu
 Sender	eileen@trendymillinercy.com
 Recipient	support@tryhatme.com
 Attachment	None
-Direction	Inbound
+Direction	Inbound```
 
 The email claimed that a billionaire relative had left an inheritance and requested banking information.
 
 This provided several areas to investigate.
 
-📸 Screenshot 3 — Phishing Alert Details
+<img width="1102" height="271" alt="3" src="https://github.com/user-attachments/assets/3cd3d616-616c-4c54-99e4-acc953dafd4f" />
 
 What this screenshot demonstrates:
 
@@ -267,7 +268,7 @@ These indicators made the alert worth investigating further.
 
 🔍 Phishing Investigation Mindset
 
-During an email investigation, I found it useful to ask:
+```During an email investigation, I found it useful to ask:
 
 Who sent the email?
         ↓
@@ -285,7 +286,7 @@ Are there other related alerts?
         ↓
 Does additional evidence support the detection?
         ↓
-True Positive or False Positive?
+True Positive or False Positive?```
 
 The important lesson is that the alert itself is only the starting point.
 
@@ -306,7 +307,7 @@ Assigning an alert establishes ownership.
 
 In a real SOC environment, this helps prevent multiple analysts from investigating the same alert while other alerts remain unattended.
 
-📸 Screenshot 4 — Assigned Alert
+<img width="1126" height="107" alt="4" src="https://github.com/user-attachments/assets/57c47f30-d9dc-408c-b141-7f74237c6d48" />
 
 What this screenshot demonstrates:
 
@@ -323,7 +324,7 @@ This is one of the most important steps in the alert-triage process.
 
 The classification should be based on the evidence collected during the investigation.
 
-Decision-Making Process
+```Decision-Making Process
 Alert Triggered
       ↓
 Review Alert Details
@@ -336,8 +337,9 @@ Determine Classification
       ↓
 Document Reasoning
       ↓
-Close Alert
-📸 Screenshot 5 — Alert Classification
+Close Alert```
+
+<img width="374" height="198" alt="5" src="https://github.com/user-attachments/assets/6e627e04-730e-4f5e-bbeb-8e6992c2dc18" />
 
 What this screenshot demonstrates:
 
@@ -382,11 +384,11 @@ For example:
 
 The goal is to make the investigation understandable to another analyst who may review the case later.
 
-📸 Screenshot 6 — Incident Report
+<img width="1035" height="456" alt="6" src="https://github.com/user-attachments/assets/39837845-bbdf-4ea0-a918-22720eb6bfa8" />
 
 What this screenshot demonstrates:
 
-The incident-report interface used to record the alert classification and investigation rationale.
+The incident-report interface is used to record the alert classification and investigation rationale.
 
 **8. Closing the Alert**
 
@@ -432,7 +434,8 @@ Audit purposes
 Detection tuning
 Analyst handover
 Future investigations
-📸 Screenshot 7 — Case Report
+
+<img width="1113" height="335" alt="7" src="https://github.com/user-attachments/assets/36912925-3327-459d-adfb-d483179b3195" />
 
 What this screenshot demonstrates:
 
@@ -459,29 +462,31 @@ Another event showed:
 
 process.name: whoami.exe
 process.parent.name: powershell.exe
-📸 Screenshot 8 — Sysmon Process Event
+
+<img width="1326" height="577" alt="8" src="https://github.com/user-attachments/assets/870645d5-ced8-4829-aca9-6876da70974d" />
+
 
 What this screenshot demonstrates:
 
-Sysmon process-creation telemetry showing PowerShell as the parent process and Windows utilities such as net.exe and whoami.exe as child processes.
+Sysmon process-creation telemetry shows PowerShell as the parent process and Windows utilities such as net.exe and whoami.exe as child processes.
 
 **11. Understanding Parent-Child Process Relationships**
 
 A parent-child process relationship shows which process started another process.
 
-For example:
+```For example:
 
 powershell.exe
       |
       +---- net.exe
       |
-      +---- whoami.exe
+      +---- whoami.exe```
 
 This type of telemetry is valuable during endpoint investigations.
 
 Attackers may use legitimate Windows utilities after gaining access to a system.
 
-For example:
+```For example:
 
 whoami
 
@@ -489,7 +494,7 @@ can provide information about the current user.
 
 Similarly:
 
-net
+net```
 
 can be used to query Windows accounts, groups, and other system information.
 
