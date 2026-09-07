@@ -287,7 +287,8 @@ Are there other related alerts?
         ↓
 Does additional evidence support the detection?
         ↓
-True Positive or False Positive?```
+True Positive or False Positive?
+```
 
 The important lesson is that the alert itself is only the starting point.
 
@@ -338,7 +339,8 @@ Determine Classification
       ↓
 Document Reasoning
       ↓
-Close Alert```
+Close Alert
+```
 
 <img width="374" height="198" alt="5" src="https://github.com/user-attachments/assets/6e627e04-730e-4f5e-bbeb-8e6992c2dc18" />
 
@@ -481,7 +483,8 @@ powershell.exe
       |
       +---- net.exe
       |
-      +---- whoami.exe```
+      +---- whoami.exe
+```
 
 This type of telemetry is valuable during endpoint investigations.
 
@@ -495,7 +498,8 @@ can provide information about the current user.
 
 Similarly:
 
-net```
+net
+```
 
 can be used to query Windows accounts, groups, and other system information.
 
